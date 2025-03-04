@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="https://new-year.spartacodingclub.kr/images/favicon.png">
+    <meta property="og:title" content="별자리 신년운세 by 르탄!" />
+    <meta property="og:description" content="2022년 별자리 운세를 알려드립니다" />
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2015/02/24/15/41/wolf-647528_960_720.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
+    <title>2022년 별자리 신년운세!</title>
+    <script type="text/javascript" src="new_year.js"></script>
+    <style>
+        body {
+            height: 100vh;
+            background-image: url('https://cdn.pixabay.com/photo/2015/02/24/15/41/wolf-647528_960_720.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+        }
+
+        * {
+            font-family: 'Gowun Batang', serif;
+            box-sizing: content-box;
+        }
+
+        .star {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border: solid 3px white;
+            background-color: #191970;
+            box-shadow: 0px 0px 10px 0px white;
+            border-radius: 200px;
+            margin: 10px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 30px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('aquaris.png');
+            margin: 80px auto 50px auto;
+        }
+
+        .title {
+            color: white;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .msg {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            line-height: 48px;
+            display: none;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .btn-back {
+            width: 150px;
+            height: 50px;
+            color: #191970;
+            border: 2px solid white;
+            background-color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .btn-share {
+            width: 150px;
+            height: 50px;
+            color: white;
+            border: 2px solid white;
+            background-color: #191970;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        @media screen and (max-width: 780px) {
+            body {
+                background-size: cover;
+                background-repeat: repeat;
+            }
+
+            .star {
+                margin-top: 50px;
+            }
+
+            .msg {
+                font-size: 24px;
+                line-height: 36px;
+                margin-bottom: 36px;
+                padding: 10px;
+            }
+
+            .msg>br {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        function back() {
+            let url = window.location.href;
+            let new_url = url.split('result.html')[0] + 'index.html';
+            window.location.href = new_url;
+        }
+        function share() {
+            var t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = window.location.href;
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+            alert('복사 완료!')
+        }
+    </script>
+</head>
+
+<body>
+    <a class="star"><strong>물병자리</strong></a>
+    <h1 class="title">2022년 물병자리의 신년운세는!</h1>
+    <p class="msg" id="star1" aria-label="물병자리">
+        나 자신을 이겨낼 수 있는 별자리로 신중하게 생각하고<br />
+        또 생각해야 좋은 결과를 가져올 수 있습니다.<br />
+        또한, 결혼을 생각하는 사람이 있다면 천천히 준비하는게 좋고,<br />
+        결혼 상대가 없는 사람은 올해 한눈에 사랑에 빠지게 되는<br />
+        상대를 만나게 됩니다.
+    </p>
+    <p class="msg" id="star2" aria-label="물고기자리">
+        올해 회사나 학교에서 인간관계에 문제가 생길 수 있으므로<br />
+        주의하는 것이 좋습니다.<br />
+        하지만, 이를 잘 극복하면 더 성장하고 좋은 사람을 만날 수 있습니다.<br />
+        또한, 올해는 주변 이성을 끌어당기는 매력이 상승하기 때문에<br />
+        유혹을 많이 받아 상대방을 선택하게 됩니다.
+    </p>
+    <p class="msg" id="star3" aria-label="양자리">
+        결단력이 있어 표현하는 것이 중요합니다.<br />
+        가치관의 차이로 인해 인간관계에 문제가 생길 수 있으므로<br />
+        조심하는 것이 좋습니다.<br />
+        또한, 연애를 하고 있다면 장거리 연애를 하게 될 수 있어<br />
+        믿음을 가지는 것이 필요하고<br />
+        연애 상대가 없는 경우에는 편견없이 있는 그대로를 봐주는 사람을 만나게 됩니다.
+    </p>
+    <p class="msg" id="star4" aria-label="황소자리">
+        사생활에서 문제가 생길 수 있습니다.<br />
+        하지만 이로 인해 변해야겠다고 마음 먹고 한층 더 성장할 수 있게 됩니다.<br />
+        또한, 올해에는 이것저것 따지지 않고 새로운 사람을 만나거나<br />
+        새로운 곳을 가게되면 지금까지 했던 연애와 다른 매력적인 상대를 만나게 됩니다.
+    </p>
+    <p class="msg" id="star5" aria-label="쌍둥이자리">
+        올해 도움이 되는 귀인을 만날 수 있으므로<br />
+        평소 인간관계에 신경쓰는 것이 좋습니다.<br />
+        하지만, 건강에 문제가 생길 수 있으니 항상 조심하고 건강 관리를 해주는 것이 좋습니다.<br />
+        또한, 올해에는 여러 사람에게 관심을 가져 새로운 사람을 만나게 됩니다.<br />
+        다만, 만나는 기간이 짧기 때문에<br />
+        어떤 사람이든 신중하게 만나도록 하세요.
+    </p>
+    <p class="msg" id="star6" aria-label="게자리">
+        현재 하는 일이 잘 풀리며 재물운이 들어오는 시기이기 때문에<br />
+        자신감을 가져도 좋습니다.<br />
+        하지만, 연인과 가치관의 차이가 생길 수 있어 대화가 필요하며<br />
+        만나는 사람이 없다면 새로운 사람보다는<br />
+        만났던 사람과 재회할 확률이 높습니다.
+    </p>
+    <p class="msg" id="star7" aria-label="사자자리">
+        올해 매우 바쁜 운세로 업무와 인간관계에서 주목을 받을 수 있으며<br />
+        그만큼 건강도 조심해주는 것이 좋습니다.<br />
+        또한, 올해는 주변 지인을 통해 새로운 사람을 만나며<br />
+        그 사람과 취미도 공유하고 편안하게<br />
+        좋은 연애를 시작하게 됩니다.
+    </p>
+    <p class="msg" id="star8" aria-label="처녀자리">
+        올해 원하는 진로에서 기회가 찾아오게 됩니다.<br />
+        하지만, 사소한 일에 집학하면 다른 일을 쳐다볼 수 없으므로<br />
+        나무보다는 숲을 보는 것이 좋습니다.<br />
+        또한, 올해에는 결혼을 준비하고 싶지만 문제가 있던 커플의 문제가 해결되고<br />
+        솔로여도 결혼하고 싶은 사람이 나타나게 됩니다.
+    </p>
+    <p class="msg" id="star9" aria-label="천칭자리">
+        주어지는 일의 양이 많아지지만<br />
+        곧 해결하게 되며, 주위의 인정을 받는 해입니다.<br />
+        하지만, 일은 잘 풀리지만 인간관계가<br />
+        불안정할 수 있으므로 주의해주는 것이 좋습니다.<br />
+        또한, 천칭자리의 커플들은 다른 때보다 걱정이 많아지지만<br />
+        대화를 통해 서로의 마음을 확인할 수 있으며<br />
+        솔로는 만남이 있지만 매우 조심스러울 것입니다.
+    </p>
+    <p class="msg" id="star10" aria-label="전갈자리">
+        자신의 일에 열정을 쏟고 약간의 고집을 가지면<br />
+        큰 성과를 이룰 수 있는 해입니다.<br />
+        다만, 이 때 너무 급하면 좋지 않으므로 주의해주세요.<br />
+        또한, 전갈자리의 경우 연애운이 정말 좋은 해로<br />
+        진심으로 좋아하는 사람을 만나 연애를 시작하게 되며<br />
+        새로운 장소에서 만날 확률이 높습니다.
+    </p>
+    <p class="msg" id="star11" aria-label="궁수자리">
+        현재의 사람보다는 예전 인연이었던 사람과<br />
+        교류를 하며 도움을 받게 되는 해입니다.<br />
+        또한, 커플의 경우 점점 서로를 신뢰하며 안정을 찾게 되고<br />
+        솔로의 경우 새로운 연애를 시작하게 됩니다.<br />
+        다만, 하반기쯤이므로 기다림이 필요합니다.
+    </p>
+    <p class="msg" id="star12" aria-label="염소자리">
+        생활에 좋지 않은 소문이 떠돌 수 있는 해이지만<br />
+        내 사람에게는 도움이 될 수 있습니다.<br />
+        또한, 염소자리는 올해 매력이 올라가며 인기가 많아집니다.<br />
+        이 때문에 결혼을 결정하기도 하며,<br />
+        고백을 많이 받아 원하는 상대방을 찾을 수 있게 됩니다.
+    </p>
+    <div class="btns">
+        <button onclick="back();" class="btn-back"><strong>뒤로가기</strong></button>
+        <button onclick="share();" class="btn-share"><strong>공유하기</strong></button>
+    </div>
+</body>
+
+</html>
